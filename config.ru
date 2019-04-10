@@ -1,5 +1,4 @@
-require 'config/environment'
-#require './config/environment'
+require './config/environment'
 
 use Rack::Static, urls: ['/css'], root: 'public' # Rack fix allows seeing the css folder.
 
@@ -9,6 +8,7 @@ end
 
 use Rack::MethodOverride
 
-#use FiguresController
-#use LandmarksController
+use ExperiencesController
+use LocationsController
+use UsersController
 run ApplicationController
