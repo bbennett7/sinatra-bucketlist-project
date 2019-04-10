@@ -17,7 +17,7 @@ class ExperiencesController < ApplicationController
       @user = current_user
       @user.experiences << @experience
       @user.save
-      # redirect "/"
+      redirect "/experiences/#{@experience.slug}"
     else
       flash[:message] = "Error: Experience must have a name, location and bucketlist"
       redirect "/experiences/new"
@@ -26,7 +26,7 @@ class ExperiencesController < ApplicationController
 
   get '/experiences/:slug' do
     if logged_in?
-      @user = current_user 
+      @user = current_user
       @experience = Experience.find_by_slug(params[:slug])
       erb :'/experiences/show_experience'
     else
@@ -68,6 +68,13 @@ class ExperiencesController < ApplicationController
 
       redirect "/experiences/#{@experience.slug}"
     end
+  end
+
+  delete '/delete/:slug' do
+    @experience = Experience.find_by_slug(params[:slug])
+    @experience.destroy
+    @user = current_user
+    redirect "/users/#{@user.slug}"
   end
 
 end
