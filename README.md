@@ -1,3 +1,6 @@
 
 
-HTTP             || ROUTE             || Action            || Used For 
+HTTP             || ROUTE             || Action            || Used For
+get                 '/'                  index                user signup
+
+get                 '/users/login'       show                 user login             
