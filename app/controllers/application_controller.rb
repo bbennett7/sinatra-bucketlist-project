@@ -19,7 +19,6 @@ class ApplicationController < Sinatra::Base
     if logged_in?
       redirect "/users/#{@user.slug}"
     else
-      #shows signup page
       erb :'/users/create_user'
     end
   end
@@ -39,7 +38,6 @@ class ApplicationController < Sinatra::Base
     if logged_in?
       redirect "/users/#{@user.slug}"
     else
-      #shows login page
       erb :'/users/login'
     end
   end
@@ -60,7 +58,6 @@ class ApplicationController < Sinatra::Base
       redirect '/login'
     end
   end
-
 
   helpers do
     def logged_in?
