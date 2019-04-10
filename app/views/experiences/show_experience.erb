@@ -1,0 +1,27 @@
+<h2><%=@experience.name%></h2>
+
+<h3><%=@experience.location.city%>, <%=@experience.location.country%><h3>
+
+<%if @experience.experienced == true%>
+  <h3>I lived this!</h3>
+<%else%>
+  <h3>I still need to live this</h3>
+<%end%><br>
+
+<h4>Change experience status:</h4>
+<div>
+  <form action="/experiences/<%=@experience.slug%>/status_change" method="POST">
+    <input type="hidden" id="hidden" name="_method" value="patch">
+    <input type=radio id="experienced" name="experienced" value=true>Experienced!</input>
+    <input type=radio id="not_experienced" name="experienced" value=false>Need to experience</input>
+    <input type="submit" id="submit" value="Update experience status">
+  </form>
+</div>
+<br>
+
+<h4><a href="/experiences/<%=@experience.slug%>/edit">Edit this experience</a></h4>
+<h4><a href="/users/<%=@user.slug%>/<%=@experience.bucketlist%>">View <%=@experience.bucketlist%> Bucketlist</a></h4>
+
+<form action="/logout" method="POST">
+  <input type="submit" id="logout" value="Log Out">
+</form>
