@@ -17,6 +17,7 @@ class ApplicationController < Sinatra::Base
 
   get '/signup' do
     if logged_in?
+      @user = current_user 
       redirect "/users/#{@user.slug}"
     else
       erb :'/users/create_user'
@@ -36,6 +37,7 @@ class ApplicationController < Sinatra::Base
 
   get '/login' do
     if logged_in?
+      @user = current_user
       redirect "/users/#{@user.slug}"
     else
       erb :'/users/login'
