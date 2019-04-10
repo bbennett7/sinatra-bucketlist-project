@@ -1,6 +1,14 @@
 class Experience < ActiveRecord::Base
   belongs_to :user
   belongs_to :location
+
+  def slug
+    self.name.downcase.gsub(/[^0-9a-z\- ]/, "").gsub(" ", "-")
+  end
+
+  def self.find_by_slug(slug)
+    experience = Experience.find{|experience| experience.slug == slug}
+  end
 end
 
 

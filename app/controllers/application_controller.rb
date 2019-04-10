@@ -12,12 +12,17 @@ class ApplicationController < Sinatra::Base
 
   get '/' do
     #shows homepage with login and signup
-    erb :index
+    if logged_in?
+      @user = current_user
+      redirect "/users/#{@user.slug}"
+    else
+      erb :index
+    end 
   end
 
   get '/signup' do
     if logged_in?
-      @user = current_user 
+      @user = current_user
       redirect "/users/#{@user.slug}"
     else
       erb :'/users/create_user'
