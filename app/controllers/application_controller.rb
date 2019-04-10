@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
 
   get '/signup' do
     if logged_in?
-      #redirect to user homepage
+      redirect "/users/#{@user.slug}"
     else
       #shows signup page
       erb :'/users/create_user'
@@ -28,10 +28,36 @@ class ApplicationController < Sinatra::Base
     if !params[:name].empty? && !params[:email].empty? && !params[:username].empty? && !params[:passowrd].empty?
       @user = User.create(params) #creates user
       session[:user_id] = @user.id #log user in
-    #redirect #user homepage
+      redirect "/users/#{@user.slug}" #redirect #user homepage
     else
       flash[:message] = "Error: All fields are required for signup."
       redirect '/signup'
+    end
+  end
+
+  get '/login' do
+    if logged_in?
+      redirect "/users/#{@user.slug}"
+    else
+      #shows login page
+      erb :'/users/login'
+    end
+  end
+
+  post '/login' do
+    @user = User.find_by(username: params[:username])
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+      redirect "/users/#{@user.slug}"
+    elsif params[:username].empty? || params[:password].empty?
+      flash[:message] = "Error: All fields are required for login."
+      redirect '/login'
+    elsif !@user || !@user.authenticate(params[:password])
+      flash[:message] = "Error: Username and password combination not found."
+      redirect '/login'
+    else
+      flash[:message] = "Error: Unable to login."
+      redirect '/login'
     end
   end
 

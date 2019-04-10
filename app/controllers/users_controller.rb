@@ -1,3 +1,7 @@
 class UsersController < ApplicationController
 
-end 
+  get '/users/:slug' do #show's user home page 
+    erb :'/users/show'
+  end
+
+end
