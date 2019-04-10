@@ -9,20 +9,20 @@ class UsersController < ApplicationController
     end
   end
 
+  get '/users/:slug/locations' do
+    if logged_in?
+      @user = User.find_by_slug(params[:slug])
+      erb :'/users/show_locations'
+    else
+      redirect '/login'
+    end
+  end
+
   get '/users/:slug/:bucketlist' do
     if logged_in?
       @user = User.find_by_slug(params[:slug])
-      if params[:bucketlist] == "life"
-        erb :'/users/show_life'
-      elsif params[:bucketlist] == "spring"
-        erb :'/users/show_spring'
-      elsif params[:bucketlist] == "summer"
-        erb :'/users/show_summer'
-      elsif params[:bucketlist] == "fall"
-        erb :'/users/show_fall'
-      elsif params[:bucketlist] == "winter"
-        erb :'/users/show_winter'
-      end
+      @bucketlist = (params[:bucketlist]).capitalize
+      erb :'/users/show_bucketlist'
     else
       redirect '/login'
     end

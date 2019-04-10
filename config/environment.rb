@@ -1,3 +1,6 @@
+require 'sqlite3'
+require 'pry'
+
 ENV['SINATRA_ENV'] ||= "development"
 
 require 'bundler/setup'

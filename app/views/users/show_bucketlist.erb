@@ -1,0 +1,21 @@
+<h2><%=@bucketlist%> Bucketlist</h2>
+
+<ol>
+<%@user.experiences.each do |experience|%>
+  <%if experience.bucketlist == @bucketlist%>
+    <li><p><%=experience.name%></p>
+    <p><%=experience.location.city%>, <%=experience.location.country%></p>
+    <%if experience.experienced == true%>
+      <p>I lived this!</p>
+    <%else%>
+      <p>I still need to live this</p>
+    <%end%></li>
+  <%end%>
+  <br>
+  <br>
+<%end%>
+</ol>
+
+<form action="/logout" method="POST">
+  <input type="submit" id="logout" value="Log Out">
+</form>
