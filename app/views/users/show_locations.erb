@@ -1,20 +1,29 @@
-<h3 class="page_heading">Where I've Been</h3>
+<h3 class="page_heading">Travels</h3>
 
-<ul>
-<%@user.experiences.each do |experience|%>
-  <%if experience.experienced == true%>
-    <li><p><%=experience.location.city%>, <%=experience.location.country%></p></li>
-  <%end%>
-<%end%>
-</ul>
-<br>
-<br>
+<div class="col"><p> </p></div>
 
-<h4 class="page_heading">Locations on my bucketlist:</h4>
-<ul>
+<div class="col_middle">
+  <h4>Where i have been: </h4>
+  <ul>
   <%@user.experiences.each do |experience|%>
-    <%if experience.experienced == false%>
+    <%if experience.experienced == true%>
       <li><p><%=experience.location.city%>, <%=experience.location.country%></p></li>
     <%end%>
   <%end%>
-</ul>
+  </ul>
+  <br>
+</div>
+
+<div class="col_middle">
+  <h4>On my bucketlist: </h4>
+  <ul>
+    <%@user.experiences.each do |experience|%>
+      <%if experience.experienced == false%>
+        <li><p><%=experience.location.city%>, <%=experience.location.country%></p></li>
+      <%end%>
+    <%end%>
+  </ul>
+  <br>
+</div>
+
+<div class="col"><p> </p></div>
