@@ -54,7 +54,7 @@ header {
   line-height: 0px;
 }
 
-.welcome {
+.page_heading {
   text-align: center;
 }
 
@@ -98,6 +98,11 @@ h5 {
 h6 {
   font-size: 1.5em;
   letter-spacing: 2px;
+}
+
+p, li {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  line-height: 5px;
 }
 
 a {
