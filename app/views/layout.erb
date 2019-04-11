@@ -8,5 +8,11 @@
 
     <%= yield %>
 
+    <%if logged_in? == true%>
+      <form action="/logout" method="POST">
+        <input type="submit" id="logout" value="Log Out">
+      </form>
+    <%end%>
+
   </body>
 </html>
