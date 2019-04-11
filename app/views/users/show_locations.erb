@@ -1,14 +1,13 @@
 <h2>Where I've Been</h2>
 
-<ol>
+<ul>
 <%@user.experiences.each do |experience|%>
   <%if experience.experienced == true%>
     <li><p><%=experience.location.city%>, <%=experience.location.country%></p></li>
   <%end%>
 <%end%>
-</ol>
-<br>
-<br>
+</ul>
+
 <h3>Locations on my bucketlist:</h3>
 <ol>
   <%@user.experiences.each do |experience|%>
