@@ -14,7 +14,7 @@
     <input type="hidden" id="hidden" name="_method" value="patch">
     <input type=radio id="experienced" name="experienced" value=true>Experienced!</input>
     <input type=radio id="not_experienced" name="experienced" value=false>Need to experience</input>
-    <input type="submit" id="submit" value="Update experience status">
+    <input class="submit" type="submit" id="submit" value="Update experience status">
   </form>
 </div>
 <br>
@@ -24,7 +24,7 @@
 
 <form action="/delete/<%=@experience.slug%>" method="POST">
   <input type="hidden" id="hidden" name="_method" value="delete">
-  <input type="submit" id="delete" value="Delete this experience">
+  <input class="submit" type="submit" id="delete" value="Delete this experience">
 </form>
 
 <!-- Fonts courier new ("Courier New", Courier, monospace) and Lucida Sans ("Lucida Sans Unicode", "Lucida Grande", sans-serif) or Trebuchet MS ("Trebuchet MS", Helvetica, sans-serif) -->
