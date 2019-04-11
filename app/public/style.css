@@ -23,6 +23,32 @@ header {
   float: left;
   text-align: center;
 }
+
+.submit {
+  font-family: "Courier New", Courier, monospace;
+  font-variant: small-caps;
+  font-size: 1.25em;
+  font-weight: bolder;
+  color: #fff;
+  background: transparent;
+  border-style: solid;
+  border-width: thin;
+  border-color: white;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.flash {
+  color: #fff;
+  background: #990000;
+  border-style: solid;
+  border-width: thin;
+  border-color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: inline;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Courier New", Courier, monospace;
   font-variant: small-caps;
