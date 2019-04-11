@@ -5,9 +5,9 @@
   <h5><%=@experience.location.city%>, <%=@experience.location.country%></h5>
 
   <%if @experience.experienced == true%>
-    <h5>I lived this!</h5>
+    <h5>Done!</h5>
   <%else%>
-    <h5>I still need to live this</h5>
+    <h5>Need to do</h5>
   <%end%><br>
 </div>
 
@@ -19,8 +19,8 @@
   <div>
     <form action="/experiences/<%=@experience.slug%>/status_change" method="POST">
       <input type="hidden" id="hidden" name="_method" value="patch">
-      <p><input type=radio id="experienced" name="experienced" value=true>Experienced!</input>
-      <input type=radio id="not_experienced" name="experienced" value=false>Need to experience</input><p>
+      <p><input type=radio id="experienced" name="experienced" value=true>Done!</input>
+      <input type=radio id="not_experienced" name="experienced" value=false>Need to do</input><p>
       <input class="submit" type="submit" id="submit" value="Update experience status">
     </form>
   </div>

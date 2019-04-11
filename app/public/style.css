@@ -3,6 +3,10 @@ html, body {
   min-height: 100%;
 }
 
+* {
+  word-wrap: normal;
+}
+
 body {
   background: url(../../images/background-leather.jpg) center no-repeat;
   background-size: cover;
@@ -34,36 +38,40 @@ h1 {
 h2 {
   font-size: 3em;
   letter-spacing: 10px;
-  line-height: 0px;
+  margin: 10px;
 }
 
 h3 {
   font-size: 2.6em;
   letter-spacing: 8px;
-  line-height: 0px;
+  margin: 10px;
 }
 
 h4 {
   font-size: 2em;
   letter-spacing: 6px;
-  line-height: 0px;
+  margin: 10px;
 }
 
 h5 {
   font-size: 1.66em;
   letter-spacing: 4px;
-  line-height: 0px;
+  margin: 10px;
 }
 
 h6 {
   font-size: 1.5em;
   letter-spacing: 2px;
-  line-height: 0px;
+  margin: 10px;
 }
 
 p, li {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  line-height: 0px;
+  margin: 10px;
+}
+
+label, input {
+  margin: 10px;
 }
 
 a {
