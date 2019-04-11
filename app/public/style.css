@@ -29,13 +29,14 @@ header {
   font-variant: small-caps;
   font-size: 1.25em;
   font-weight: bolder;
-  color: #fff;
-  background: transparent;
+  color: rgb(152, 72, 3);
+  background: #fff;
   border-style: solid;
   border-width: thin;
   border-color: white;
-  padding-left: 25px;
-  padding-right: 25px;
+  border-radius: 4px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .flash {
