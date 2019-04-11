@@ -34,7 +34,7 @@ class ApplicationController < Sinatra::Base
       session[:user_id] = @user.id
       redirect "/users/#{@user.slug}"
     else
-      flash[:message] = "Error: All fields are required for signup."
+      flash[:message] = "Error: All fields required for signup."
       redirect '/signup'
     end
   end
@@ -54,7 +54,7 @@ class ApplicationController < Sinatra::Base
       session[:user_id] = @user.id
       redirect "/users/#{@user.slug}"
     elsif params[:username].empty? || params[:password].empty?
-      flash[:message] = "Error: All fields are required for login."
+      flash[:message] = "Error: All fields required for login."
       redirect '/login'
     elsif !@user || !@user.authenticate(params[:password])
       flash[:message] = "Error: Username and password combination not found."
