@@ -103,6 +103,23 @@ h1 a:hover {
   text-decoration: none;
 }
 
+#map {
+  padding: 1.5%;
+}
+
+#map_section {
+  width: 55%;
+  height: 70%;
+  float: left;
+  padding: 0% 0% 0% 0%;
+  margin-bottom: 0%;
+  background: rgb(152, 72, 3);
+  border-style: solid;
+  border-width: medium;
+  border-color: #fffff2;
+  box-shadow: 1px 1px black;
+}
+
 .col {
   width: 22%;
   height: 65%;
