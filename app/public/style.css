@@ -50,10 +50,6 @@ header {
   display: inline;
 }
 
-.home_list {
-  line-height: 0px;
-}
-
 .page_heading {
   text-align: center;
 }
@@ -81,18 +77,20 @@ h2 {
 }
 
 h3 {
-  font-size: 2.34em;
+  font-size: 2.6em;
   letter-spacing: 8px;
 }
 
 h4 {
   font-size: 2em;
   letter-spacing: 6px;
+  line-height: 0px;
 }
 
 h5 {
   font-size: 1.66em;
   letter-spacing: 4px;
+  line-height: 0px;
 }
 
 h6 {

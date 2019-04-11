@@ -1,26 +1,26 @@
-<h2><%=@experience.name%></h2>
+<h3 class="page_heading"><%=@experience.name%></h3>
 
-<h3><%=@experience.location.city%>, <%=@experience.location.country%><h3>
+<h4 class="page_heading"><%=@experience.location.city%>, <%=@experience.location.country%></h4>
 
 <%if @experience.experienced == true%>
-  <h3>I lived this!</h3>
+  <h4 class="page_heading">I lived this!</h4>
 <%else%>
-  <h3>I still need to live this</h3>
+  <h4 class="page_heading">I still need to live this</h4>
 <%end%><br>
 
-<h4>Change experience status:</h4>
+<h5>Change experience status:</h5>
 <div>
   <form action="/experiences/<%=@experience.slug%>/status_change" method="POST">
     <input type="hidden" id="hidden" name="_method" value="patch">
-    <input type=radio id="experienced" name="experienced" value=true>Experienced!</input>
-    <input type=radio id="not_experienced" name="experienced" value=false>Need to experience</input>
+    <p><input type=radio id="experienced" name="experienced" value=true>Experienced!</input>
+    <input type=radio id="not_experienced" name="experienced" value=false>Need to experience</input><p>
     <input class="submit" type="submit" id="submit" value="Update experience status">
   </form>
 </div>
 <br>
 
-<h4><a href="/experiences/<%=@experience.slug%>/edit">Edit this experience</a></h4>
-<h4><a href="/users/<%=@user.slug%>/<%=@experience.bucketlist%>">View <%=@experience.bucketlist%> Bucketlist</a></h4>
+<h5><a href="/experiences/<%=@experience.slug%>/edit">Edit this experience</a></h5>
+<h5><a href="/users/<%=@user.slug%>/<%=@experience.bucketlist%>">View <%=@experience.bucketlist%> Bucketlist</a></h5>
 
 <form action="/delete/<%=@experience.slug%>" method="POST">
   <input type="hidden" id="hidden" name="_method" value="delete">
