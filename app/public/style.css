@@ -75,6 +75,8 @@ label, input {
 }
 
 a {
+  font-family: "Courier New", Courier, monospace;
+  color: #fffff2;
   text-decoration: none;
 }
 
