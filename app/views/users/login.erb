@@ -1,14 +1,11 @@
-<h2>Log in to your Bucketlist account:</h2>
-<br>
+<h5>Log In To Your BucketList Account:</h5>
 <% if flash.has?(:message) %>
   <%= flash[:message] %>
 <% end %>
 <form action="/login" method="POST">
-  <label for="username">Username: </label>
-  <input type="text" id="username" name="username">
-  <br><br>
-  <label for="password">Password: </label>
-  <input type="password" id="password" name="password">
-  <br><br>
+  <h6><label for="username">Username: </label>
+  <input type="text" id="username" name="username"></h6>
+  <h6><label for="password">Password: </label>
+  <input type="password" id="password" name="password"></h6>
   <input type="submit" id="log_in" value="Log In">
 </form>
