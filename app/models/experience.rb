@@ -7,7 +7,7 @@ class Experience < ActiveRecord::Base
   end
 
   def self.find_all_by_slug(slug)
-    experience = Experience.select{|experience| experience.slug == slug}
+    experience_matches = Experience.select{|experience| experience.slug == slug}
   end
 end
 

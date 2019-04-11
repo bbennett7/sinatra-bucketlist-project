@@ -26,7 +26,8 @@ class ExperiencesController < ApplicationController
 
   get '/experiences/:slug' do
     @user = current_user
-    @experience = Experience.find_by_slug(params[:slug])
+    @experience_matches = Experience.find_all_by_slug(params[:slug])
+    @experience = @experience_matches.find{|experience| experience.user_id == @user.id}
 
     if logged_in? && @user.id == @experience.user_id
       erb :'/experiences/show_experience'
@@ -36,7 +37,10 @@ class ExperiencesController < ApplicationController
   end
 
   patch '/experiences/:slug/status_change' do
-    @experience = Experience.find_by_slug(params[:slug])
+    @user = current_user
+    @experience_matches = Experience.find_all_by_slug(params[:slug])
+    @experience = @experience_matches.find{|experience| experience.user_id == @user.id}
+
     @experience[:experienced] = params[:experienced]
     @experience.save
 
@@ -47,7 +51,8 @@ class ExperiencesController < ApplicationController
 
   get '/experiences/:slug/edit' do
     @user = current_user
-    @experience = Experience.find_by_slug(params[:slug])
+    @experience_matches = Experience.find_all_by_slug(params[:slug])
+    @experience = @experience_matches.find{|experience| experience.user_id == @user.id}
 
     if logged_in? && @user.id == @experience.user_id
       erb :'/experiences/edit_experience'
@@ -64,12 +69,17 @@ class ExperiencesController < ApplicationController
       flash[:message] = "Error: Must edit country with city."
       redirect "/experiences/#{params[:slug]}/edit"
     else
-      @experience = Experience.find_by_slug(params[:slug])
-      @experience[:name] = params[:name] unless params[:name].empty?
-      @experience[:bucketlist] = params[:bucketlist] unless params[:bucketlist].empty?
+      @user = current_user
+      @experience_matches = Experience.find_all_by_slug(params[:slug])
+      @experience = @experience_matches.find{|experience| experience.user_id == @user.id}
 
-      @location = Location.find_or_create_by(city: params[:city], country: params[:country])
-      @experience[:location_id] = @location.id
+      @experience[:name] = params[:name] unless params[:name].empty?
+      @experience[:bucketlist] = params[:bucketlist] unless !params[:bucketlist]
+
+      unless params[:city].empty? || params[:country].empty?
+        @location = Location.find_or_create_by(city: params[:city], country: params[:country])
+        @experience[:location_id] = @location.id
+      end 
 
       @experience.save
 
@@ -78,9 +88,10 @@ class ExperiencesController < ApplicationController
   end
 
   delete '/delete/:slug' do
-    @experience = Experience.find_by_slug(params[:slug])
-    @experience.destroy
     @user = current_user
+    @experience_matches = Experience.find_all_by_slug(params[:slug])
+    @experience = @experience_matches.find{|experience| experience.user_id == @user.id}
+    @experience.destroy
     redirect "/users/#{@user.slug}"
   end
 end
