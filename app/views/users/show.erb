@@ -1,11 +1,17 @@
-<h2>Welcome, <%=@user.name%></h2>
+<h3 class="welcome">Welcome, <%=@user.name%></h3>
+<br>
 
-<h4><a href="/experiences/new">Add a new experience to my bucketlist</a></h4>
-<br>
-<h4><a href="/users/<%=@user.slug%>/life">View my Life Bucketlist</a></h4>
-<h4><a href="/users/<%=@user.slug%>/spring">View my Spring Bucketlist</a></h4>
-<h4><a href="/users/<%=@user.slug%>/summer">View my Summer Bucketlist</a></h4>
-<h4><a href="/users/<%=@user.slug%>/fall">View my Fall Bucketlist</a></h4>
-<h4><a href="/users/<%=@user.slug%>/winter">View my Winter Bucketlist</a></h4>
-<br>
-<h4><a href="/users/<%=@user.slug%>/locations">View the places I have been</a></h4>
+<div class="left_margin"></div>
+
+<div class="home_list">
+  <h5><a href="/users/<%=@user.slug%>/life">View my life bucketlist</a></h5>
+  <h5><a href="/users/<%=@user.slug%>/spring">View my spring bucketlist</a></h5>
+  <h5><a href="/users/<%=@user.slug%>/summer">View my summer bucketlist</a></h5>
+  <h5><a href="/users/<%=@user.slug%>/fall">View my fall bucketlist</a></h5>
+  <h5><a href="/users/<%=@user.slug%>/winter">View my winter bucketlist</a></h5>
+  <h5><a href="/users/<%=@user.slug%>/locations">View the places I have been</a></h5>
+  <br>
+  <h5><a href="/experiences/new">Add to my bucketlists</a></h5>
+</div>
+
+<div class="right_margin"></div>

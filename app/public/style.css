@@ -50,6 +50,14 @@ header {
   display: inline;
 }
 
+.home_list {
+  line-height: 0px;
+}
+
+.welcome {
+  text-align: center;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Courier New", Courier, monospace;
   font-variant: small-caps;
