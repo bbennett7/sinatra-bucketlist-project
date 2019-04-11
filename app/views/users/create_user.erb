@@ -1,19 +1,23 @@
-<h4>Sign Up For a BucketList Account</h4>
-<% if flash.has?(:message) %>
-  <h6 class="flash"><%= flash[:message] %></h6>
-<% end %>
-<form action="/signup" method="POST">
-  <label for="name">Name: </label>
-  <input type="text" id="name" name="name">
-  <br><br>
-  <label for="email">Email: </label>
-  <input type="text" id="email" name="email">
-  <br><br>
-  <label for="username">Username: </label>
-  <input type="text" id="username" name="username">
-  <br><br>
-  <label for="password">Password: </label>
-  <input type="password" id="password" name="password">
-  <br><br>
-  <input class="submit" type="submit" id="sign_up" value="Sign Up">
-</form>
+<div class="col"><p> </p></div>
+
+<div class="col_middle">
+  <h4>Sign up for BucketList</h4>
+  <% if flash.has?(:message) %>
+    <h6 class="flash"><%= flash[:message] %></h6>
+  <% end %>
+  <form action="/signup" method="POST">
+    <h6><label for="name">Name: </label>
+    <input type="text" id="name" name="name"></h6>
+    <h6><label for="email">Email: </label>
+    <input type="text" id="email" name="email"></h6>
+    <h6><label for="username">Username: </label>
+    <input type="text" id="username" name="username"></h6>
+    <h6><label for="password">Password: </label>
+    <input type="password" id="password" name="password"></h6>
+    <input class="submit" type="submit" id="sign_up" value="Sign Up">
+  </form>
+  <br>
+  <br>
+</div>
+
+<div class="col"><p> </p></div>
