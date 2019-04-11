@@ -13,6 +13,9 @@
 
 <div class="col_middle">
   <h5>Change experience status:</h5>
+  <% if flash.has?(:message) %>
+    <h6 class="flash success"><%= flash[:message] %></h6>
+  <% end %>
   <div>
     <form action="/experiences/<%=@experience.slug%>/status_change" method="POST">
       <input type="hidden" id="hidden" name="_method" value="patch">

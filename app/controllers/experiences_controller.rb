@@ -40,6 +40,8 @@ class ExperiencesController < ApplicationController
     @experience[:experienced] = params[:experienced]
     @experience.save
 
+    flash[:message] = "Successfully changed experience status."
+
     redirect "/experiences/#{@experience.slug}"
   end
 
@@ -47,7 +49,7 @@ class ExperiencesController < ApplicationController
     @user = current_user
     @experience = Experience.find_by_slug(params[:slug])
 
-    if logged_in? && @user.id == @experience.user_id 
+    if logged_in? && @user.id == @experience.user_id
       erb :'/experiences/edit_experience'
     else
       redirect '/login'
