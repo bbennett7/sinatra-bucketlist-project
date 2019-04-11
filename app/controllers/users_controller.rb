@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   get '/users/:slug/:bucketlist' do
     @user = User.find_by_slug(params[:slug])
-    if logged_in? && @user == current_user 
+    if logged_in? && @user == current_user
       @bucketlist = (params[:bucketlist]).capitalize
       erb :'/users/show_bucketlist'
     else

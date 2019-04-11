@@ -25,9 +25,10 @@ class ExperiencesController < ApplicationController
   end
 
   get '/experiences/:slug' do
-    if logged_in?
-      @user = current_user
-      @experience = Experience.find_by_slug(params[:slug])
+    @user = current_user
+    @experience = Experience.find_by_slug(params[:slug])
+
+    if logged_in? && @user.id == @experience.user_id
       erb :'/experiences/show_experience'
     else
       redirect '/login'
@@ -43,8 +44,10 @@ class ExperiencesController < ApplicationController
   end
 
   get '/experiences/:slug/edit' do
-    if logged_in?
-      @experience = Experience.find_by_slug(params[:slug])
+    @user = current_user
+    @experience = Experience.find_by_slug(params[:slug])
+
+    if logged_in? && @user.id == @experience.user_id 
       erb :'/experiences/edit_experience'
     else
       redirect '/login'
