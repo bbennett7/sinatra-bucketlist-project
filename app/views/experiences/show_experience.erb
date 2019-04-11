@@ -1,28 +1,37 @@
-<h3 class="page_heading"><%=@experience.name%></h3>
+<div class="col"><p> </p></div>
 
-<h4 class="page_heading"><%=@experience.location.city%>, <%=@experience.location.country%></h4>
+<div class="col_middle_with_header">
+  <h3><%=@experience.name%></h3>
+  <h5><%=@experience.location.city%>, <%=@experience.location.country%></h5>
 
-<%if @experience.experienced == true%>
-  <h4 class="page_heading">I lived this!</h4>
-<%else%>
-  <h4 class="page_heading">I still need to live this</h4>
-<%end%><br>
-
-<h5>Change experience status:</h5>
-<div>
-  <form action="/experiences/<%=@experience.slug%>/status_change" method="POST">
-    <input type="hidden" id="hidden" name="_method" value="patch">
-    <p><input type=radio id="experienced" name="experienced" value=true>Experienced!</input>
-    <input type=radio id="not_experienced" name="experienced" value=false>Need to experience</input><p>
-    <input class="submit" type="submit" id="submit" value="Update experience status">
-  </form>
+  <%if @experience.experienced == true%>
+    <h5>I lived this!</h5>
+  <%else%>
+    <h5>I still need to live this</h5>
+  <%end%><br>
 </div>
-<br>
 
-<h5><a href="/experiences/<%=@experience.slug%>/edit">Edit this experience</a></h5>
-<h5><a href="/users/<%=@user.slug%>/<%=@experience.bucketlist%>">View <%=@experience.bucketlist%> Bucketlist</a></h5>
+<div class="col_middle">
+  <h5>Change experience status:</h5>
+  <div>
+    <form action="/experiences/<%=@experience.slug%>/status_change" method="POST">
+      <input type="hidden" id="hidden" name="_method" value="patch">
+      <p><input type=radio id="experienced" name="experienced" value=true>Experienced!</input>
+      <input type=radio id="not_experienced" name="experienced" value=false>Need to experience</input><p>
+      <input class="submit" type="submit" id="submit" value="Update experience status">
+    </form>
+  </div>
+  <br>
 
-<form action="/delete/<%=@experience.slug%>" method="POST">
-  <input type="hidden" id="hidden" name="_method" value="delete">
-  <input class="submit" type="submit" id="delete" value="Delete this experience">
-</form>
+  <h5><a href="/experiences/<%=@experience.slug%>/edit">Edit this experience</a></h5>
+  <h5><a href="/users/<%=@user.slug%>/<%=@experience.bucketlist%>">View <%=@experience.bucketlist.downcase%> bucketlist</a></h5>
+
+  <form action="/delete/<%=@experience.slug%>" method="POST">
+    <input type="hidden" id="hidden" name="_method" value="delete">
+    <input class="submit" type="submit" id="delete" value="Delete this experience">
+  </form>
+  <br>
+  <br>
+</div>
+
+<div class="col"><p> </p></div>
