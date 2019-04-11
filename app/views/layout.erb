@@ -11,15 +11,18 @@
 
     <%= yield %>
 
-    <%if logged_in? == true%>
-      <br>
-      <br>
-      <form action="/logout" method="POST">
-        <input class="submit" type="submit" id="logout" value="Log Out">
-      </form>
-      <br>
-      <br>
-    <%end%>
-
   </body>
+
+  <footer>
+  <%if logged_in? == true%>
+    <br>
+    <br>
+    <form action="/logout" method="POST">
+      <input class="logout" type="submit" id="logout" value="Log Out">
+    </form>
+    <br>
+    <br>
+  <%end%>
+  </footer>
+
 </html>

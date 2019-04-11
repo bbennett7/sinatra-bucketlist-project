@@ -82,6 +82,21 @@ h1 a:hover {
   text-decoration: none;
 }
 
+.col {
+  width: 31%;
+  height: 60%;
+  float: left;
+  padding: 0% 1% 0% 1%;
+
+}
+
+.middle {
+  background: rgb(152, 72, 3);
+  border-style: solid;
+  border-width: medium;
+  border-color: #fffff2;
+}
+
 .page_heading {
   text-align: center;
 }
@@ -106,7 +121,22 @@ h1 a:hover {
   background: #fffff2;
   border-style: solid;
   border-width: thin;
-  border-color: white;
+  border-color: #fffff2;
+  border-radius: 4px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.logout {
+  font-family: "Courier New", Courier, monospace;
+  font-variant: small-caps;
+  font-size: 1.25em;
+  font-weight: bolder;
+  color: #fffff2;
+  background: transparent;
+  border-style: solid;
+  border-width: thin;
+  border-color: #fffff2;
   border-radius: 4px;
   padding-left: 15px;
   padding-right: 15px;
@@ -121,4 +151,17 @@ h1 a:hover {
   padding-left: 20px;
   padding-right: 20px;
   display: inline;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+
+.clear {
+  clear: both;
 }

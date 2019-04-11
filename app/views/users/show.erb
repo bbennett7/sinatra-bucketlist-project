@@ -1,13 +1,19 @@
 <h3 class="page_heading">Welcome, <%=@user.name%></h3>
 <br>
 
-<div>
-  <h5><a href="/users/<%=@user.slug%>/life">View my life bucketlist</a></h5>
-  <h5><a href="/users/<%=@user.slug%>/spring">View my spring bucketlist</a></h5>
+<div class="col"><p> </p></div>
+
+<div class="col middle">
+  <h5 ><a href="/users/<%=@user.slug%>/life">View my life bucketlist</a></h5>
+  <h5><a  href="/users/<%=@user.slug%>/spring">View my spring bucketlist</a></h5>
   <h5><a href="/users/<%=@user.slug%>/summer">View my summer bucketlist</a></h5>
   <h5><a href="/users/<%=@user.slug%>/fall">View my fall bucketlist</a></h5>
   <h5><a href="/users/<%=@user.slug%>/winter">View my winter bucketlist</a></h5>
   <h5><a href="/users/<%=@user.slug%>/locations">View places i have been</a></h5>
   <br>
-  <h5><a href="/experiences/new">Add to my bucketlists</a></h5>
+  <h5 class="home_list"><a href="/experiences/new">Add to my bucketlists</a></h5>
 </div>
+<div class="spacer"></div>
+
+
+<div class="col"></div>
