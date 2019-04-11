@@ -5,11 +5,8 @@
 <div class="col_middle">
   <h4>Where i have been: </h4>
   <ul>
-  <%@user.experiences.each do |experience|%>
-    <%if experience.experienced == true%>
-
-      <li><p><%=experience.location.city%>, <%=experience.location.country%></p></li>
-    <%end%>
+  <%@traveled_locations.each do |location|%>
+    <li><p><%=location.city%>, <%=location.country%></p></li>
   <%end%>
   </ul>
   <br>
@@ -18,15 +15,11 @@
 <div class="col_middle">
   <h4>On my bucketlist: </h4>
   <ul>
-    <%@user.experiences.each do |experience|%>
-      <%if experience.experienced == false%>
-        <li><p><%=experience.location.city%>, <%=experience.location.country%></p></li>
-      <%end%>
+    <%@bucketlist_locations.each do |location|%>
+      <li><p><%=location.city%>, <%=location.country%></p></li>
     <%end%>
   </ul>
   <br>
 </div>
 
 <div class="col"><p> </p></div>
-
-<don't show repeat locations>

@@ -13,6 +13,7 @@ Experience.create(name: "Go apple picking", bucketlist: "Fall", experienced: fal
 Experience.create(name: "Visit a pumpkin patch", bucketlist: "Fall", experienced: false, user_id: 1, location_id: 2)
 Experience.create(name: "Watch Christmas movies", bucketlist: "Winter", experienced: false, user_id: 1, location_id: 2)
 Experience.create(name: "Visit the snow", bucketlist: "Winter", experienced: false, user_id: 1, location_id: 10)
+Experience.create(name: "Take a ski trip", bucketlist: "Winter", experienced: false, user_id: 1, location_id: 10)
 
 
 Experience.create(name: "Climb Machu Picchu", bucketlist: "Life", experienced: false, user_id: 2, location_id: 4)
@@ -20,7 +21,6 @@ Experience.create(name: "Go to Dodger's game", bucketlist: "Spring", experienced
 Experience.create(name: "Go to Cinespia movie", bucketlist: "Summer", experienced: false, user_id: 2, location_id: 2)
 Experience.create(name: "Go camping", bucketlist: "Fall", experienced: false, user_id: 2, location_id: 10)
 Experience.create(name: "Go apple picking", bucketlist: "Fall", experienced: false, user_id: 2, location_id: 5)
-Experience.create(name: "Take a ski trip", bucketlist: "Winter", experienced: false, user_id: 1, location_id: 10)
 
 
 Experience.create(name: "Learn to surf", bucketlist: "Life", experienced: true, user_id: 3, location_id: 3)
