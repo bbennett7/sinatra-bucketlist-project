@@ -1,6 +1,6 @@
 <h4>Sign Up For a BucketList Account</h4>
 <% if flash.has?(:message) %>
-  <%= flash[:message] %>
+  <h6 class="flash"><%= flash[:message] %></h6>
 <% end %>
 <form action="/signup" method="POST">
   <label for="name">Name: </label>

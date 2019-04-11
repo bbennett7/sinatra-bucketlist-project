@@ -1,7 +1,7 @@
 <h2>Add a new experience:</h2>
 
 <% if flash.has?(:message) %>
-  <%= flash[:message] %>
+  <h6 class="flash"><%= flash[:message] %></h6>
 <% end %>
 
 <form action="/experiences" method="POST">
