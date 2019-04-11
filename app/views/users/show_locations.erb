@@ -7,15 +7,17 @@
   <%end%>
 <%end%>
 </ul>
+<br>
+<br>
 
 <h3>Locations on my bucketlist:</h3>
-<ol>
+<ul>
   <%@user.experiences.each do |experience|%>
     <%if experience.experienced == false%>
       <li><p><%=experience.location.city%>, <%=experience.location.country%></p></li>
     <%end%>
   <%end%>
-</ol>
+</ul>
 
 <form action="/logout" method="POST">
   <input type="submit" id="logout" value="Log Out">
