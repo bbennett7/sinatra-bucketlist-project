@@ -37,7 +37,9 @@ class ExperiencesController < ApplicationController
   patch '/experiences/:slug/status_change' do
     @experience = Experience.find_by_slug(params[:slug])
     @experience[:experienced] = params[:experienced]
-    redirect "/experiences/#{params[:slug]}"
+    @experience.save
+
+    redirect "/experiences/#{@experience.slug}"
   end
 
   get '/experiences/:slug/edit' do
