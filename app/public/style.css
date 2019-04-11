@@ -83,14 +83,16 @@ h1 a:hover {
 }
 
 .col {
-  width: 31%;
+  width: 22%;
   height: 60%;
   float: left;
-  padding: 0% 1% 0% 1%;
-
 }
 
-.middle {
+.col_middle {
+  width: 42%;
+  height: 60%;
+  float: left;
+  padding: 0% 0% 0% 13%;
   background: rgb(152, 72, 3);
   border-style: solid;
   border-width: medium;
