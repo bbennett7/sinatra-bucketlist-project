@@ -58,10 +58,10 @@ class ExperiencesController < ApplicationController
 
   patch '/experiences/:slug' do
     if params[:city].empty? && !params[:country].empty?
-      flash[:message] = "Error: Must edit city and country together."
+      flash[:message] = "Error: Must edit city with country."
       redirect "/experiences/#{params[:slug]}/edit"
     elsif !params[:city].empty? && params[:country].empty?
-      flash[:message] = "Error: Must edit city and country together."
+      flash[:message] = "Error: Must edit country with city."
       redirect "/experiences/#{params[:slug]}/edit"
     else
       @experience = Experience.find_by_slug(params[:slug])

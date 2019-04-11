@@ -6,8 +6,8 @@ class Experience < ActiveRecord::Base
     self.name.downcase.gsub(/[^0-9a-z\- ]/, "").gsub(" ", "-")
   end
 
-  def self.find_by_slug(slug)
-    experience = Experience.find{|experience| experience.slug == slug}
+  def self.find_all_by_slug(slug)
+    experience = Experience.select{|experience| experience.slug == slug}
   end
 end
 

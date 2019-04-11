@@ -4,6 +4,7 @@
 <div class="col_middle">
   <h4>Log in to BucketList</h4>
   <% if flash.has?(:message) %>
+    <br>
     <h6 class="flash"><%= flash[:message] %></h6>
   <% end %>
   <form action="/login" method="POST">
