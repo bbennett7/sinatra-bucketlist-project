@@ -29,3 +29,5 @@ class UsersController < ApplicationController
   end
 
 end
+
+#Make sure user can only edit or delete their own experiences

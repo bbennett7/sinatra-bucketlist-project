@@ -11,13 +11,12 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-    #shows homepage with login and signup
     if logged_in?
       @user = current_user
       redirect "/users/#{@user.slug}"
     else
       erb :index
-    end 
+    end
   end
 
   get '/signup' do
@@ -31,9 +30,9 @@ class ApplicationController < Sinatra::Base
 
   post '/signup' do
     if !params[:name].empty? && !params[:email].empty? && !params[:username].empty? && !params[:passowrd].empty?
-      @user = User.create(params) #creates user
-      session[:user_id] = @user.id #log user in
-      redirect "/users/#{@user.slug}" #redirect #user homepage
+      @user = User.create(params)
+      session[:user_id] = @user.id
+      redirect "/users/#{@user.slug}"
     else
       flash[:message] = "Error: All fields are required for signup."
       redirect '/signup'
