@@ -3,17 +3,29 @@ html, body {
   min-height: 100%;
 }
 
-h1 {
-  font-family: "Courier New", Courier, monospace;
-  color: #fff;
-}
-
 body {
   background: url(../../images/background-leather.jpg) center no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 
-a:visited {
-  color: black;
+header {
+  text-align: center;
+}
+
+#enter_bar {
+  
+}
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-variant: small-caps;
+  font-size: 3.75em;
+  letter-spacing: 15px;
+  color: #fff;
+}
+
+h1 a:visited {
+  font-family: "Courier New", Courier, monospace;
+  color: #fff;
 }
