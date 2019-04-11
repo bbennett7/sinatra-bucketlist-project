@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
-  get '/users/:slug' do #show's user home page
-    if logged_in?
-      @user = User.find_by_slug(params[:slug])
+  get '/users/:slug' do
+    @user = User.find_by_slug(params[:slug])
+    if logged_in? && @user == current_user
       erb :'/users/show'
     else
       redirect '/login'
@@ -10,8 +10,8 @@ class UsersController < ApplicationController
   end
 
   get '/users/:slug/locations' do
-    if logged_in?
-      @user = User.find_by_slug(params[:slug])
+    @user = User.find_by_slug(params[:slug])
+    if logged_in? && @user == current_user
       erb :'/users/show_locations'
     else
       redirect '/login'
@@ -19,8 +19,8 @@ class UsersController < ApplicationController
   end
 
   get '/users/:slug/:bucketlist' do
-    if logged_in?
-      @user = User.find_by_slug(params[:slug])
+    @user = User.find_by_slug(params[:slug])
+    if logged_in? && @user == current_user 
       @bucketlist = (params[:bucketlist]).capitalize
       erb :'/users/show_bucketlist'
     else
@@ -29,5 +29,3 @@ class UsersController < ApplicationController
   end
 
 end
-
-#Make sure user can only edit or delete their own experiences
