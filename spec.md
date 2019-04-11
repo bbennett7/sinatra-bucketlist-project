@@ -20,7 +20,10 @@ Confirm
 - [X] You don't include changes in a commit that aren't related to the commit message
 
 
-DONE// Check that changing an experience with same name doesn't change other user's experience of same name, edit & status changes
-Check that user cannot access other user's experience
-Check that user cannot access other user's edit
-Check that user cannot access other user's delete
+DONE // Changing an experience with same name doesn't change other user's experience of same name, edit & status changes
+DONE // Check that user cannot access other user's Bucketlist
+DONE // Check that user cannot access other user's locations
+DONE // Check that user cannot access other user's homepage
+DONE // Check that user cannot access other user's experience
+DONE // Check that user cannot access other user's edit experience 
+DONE // Check that user cannot access other user's delete

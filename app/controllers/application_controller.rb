@@ -57,7 +57,7 @@ class ApplicationController < Sinatra::Base
       flash[:message] = "Error: All fields required for login."
       redirect '/login'
     elsif !@user || !@user.authenticate(params[:password])
-      flash[:message] = "Error: Username and password combination not found."
+      flash[:message] = "Error: Account not found."
       redirect '/login'
     else
       flash[:message] = "Error: Unable to login."

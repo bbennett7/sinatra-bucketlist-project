@@ -25,14 +25,20 @@ class ExperiencesController < ApplicationController
   end
 
   get '/experiences/:slug' do
-    @user = current_user
-    @experience_matches = Experience.find_all_by_slug(params[:slug])
-    @experience = @experience_matches.find{|experience| experience.user_id == @user.id}
-
-    if logged_in? && @user.id == @experience.user_id
-      erb :'/experiences/show_experience'
-    else
+    if !logged_in?
       redirect '/login'
+    else
+      @user = current_user
+      @experience_matches = Experience.find_all_by_slug(params[:slug])
+      @experience = @experience_matches.find{|experience| experience.user_id == @user.id}
+
+      if !@experience
+        redirect '/login'
+      elsif logged_in? && @user.id == @experience.user_id
+        erb :'/experiences/show_experience'
+      else
+        redirect '/login'
+      end
     end
   end
 
@@ -50,14 +56,20 @@ class ExperiencesController < ApplicationController
   end
 
   get '/experiences/:slug/edit' do
-    @user = current_user
-    @experience_matches = Experience.find_all_by_slug(params[:slug])
-    @experience = @experience_matches.find{|experience| experience.user_id == @user.id}
-
-    if logged_in? && @user.id == @experience.user_id
-      erb :'/experiences/edit_experience'
-    else
+    if !logged_in?
       redirect '/login'
+    else
+      @user = current_user
+      @experience_matches = Experience.find_all_by_slug(params[:slug])
+      @experience = @experience_matches.find{|experience| experience.user_id == @user.id}
+
+      if !@experience
+        redirect '/login'
+      elsif logged_in? && @user.id == @experience.user_id
+        erb :'/experiences/edit_experience'
+      else
+        redirect '/login'
+      end
     end
   end
 
@@ -79,7 +91,7 @@ class ExperiencesController < ApplicationController
       unless params[:city].empty? || params[:country].empty?
         @location = Location.find_or_create_by(city: params[:city], country: params[:country])
         @experience[:location_id] = @location.id
-      end 
+      end
 
       @experience.save
 
