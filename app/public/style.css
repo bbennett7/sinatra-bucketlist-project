@@ -62,7 +62,7 @@ h6 {
 
 p, li {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  line-height: 5px;
+  line-height: 0px;
 }
 
 a {
@@ -84,13 +84,13 @@ h1 a:hover {
 
 .col {
   width: 22%;
-  height: 60%;
+  height: 70%;
   float: left;
 }
 
 .col_middle {
   width: 42%;
-  height: 60%;
+  height: auto;
   float: left;
   padding: 0% 0% 0% 13%;
   background: rgb(152, 72, 3);

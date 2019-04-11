@@ -1,19 +1,24 @@
 <h3 class="page_heading"><%=@bucketlist%> BucketList</h3>
 
-<ol>
-<%@user.experiences.each do |experience|%>
-  <%if experience.bucketlist == @bucketlist%>
-    <p><li><a href="/experiences/<%=experience.slug%>"><%=experience.name%></a>
-    <p><%=experience.location.city%>, <%=experience.location.country%></p>
-    <%if experience.experienced == true%>
-      <p>I lived this!</p>
-    <%else%>
-      <p>I still need to live this</p>
-    <%end%></li></p>
-    <br>
-  <%end%>
-<%end%>
-</ol>
+<div class="col"><p> </p></div>
 
-<br>
-<br>
+<div class="col_middle">
+  <ol>
+  <%@user.experiences.each do |experience|%>
+    <%if experience.bucketlist == @bucketlist%>
+      <li><h6><a href="/experiences/<%=experience.slug%>"><%=experience.name%></a></h6></li>
+      <p><%=experience.location.city%>, <%=experience.location.country%></p>
+      <%if experience.experienced == true%>
+        <p>I lived this!</p>
+      <%else%>
+        <p>I still need to live this</p>
+      <%end%>
+      <br>
+    <%end%>
+  <%end%>
+  </ol>
+</div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+
+<div class="col"><p> </p></div>
