@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6 {
   font-variant: small-caps;
   font-weight: bold;
   color: #fffff2;
+  text-shadow: 1px 1px black;
 }
 h1 {
   font-size: 4em;
@@ -30,6 +31,7 @@ h1 {
   border-style: solid;
   border-width: medium;
   border-color: #fffff2;
+  box-shadow: 1px 1px black;
   padding-left: 90px;
   padding-right: 80px;
   display: inline;
@@ -101,6 +103,10 @@ h1 a:hover {
   text-decoration: none;
 }
 
+input {
+  box-shadow: 1px 1px black;
+}
+
 .col {
   width: 22%;
   height: 65%;
@@ -117,6 +123,7 @@ h1 a:hover {
   border-style: solid;
   border-width: medium;
   border-color: #fffff2;
+  box-shadow: 1px 1px black;
 }
 
 .col_middle_with_header {
@@ -162,6 +169,7 @@ h1 a:hover {
   border-width: thin;
   border-color: #fffff2;
   border-radius: 4px;
+  box-shadow: 1px 1px black;
   padding-left: 15px;
   padding-right: 15px;
   line-height: normal;
@@ -178,6 +186,7 @@ h1 a:hover {
   border-width: thin;
   border-color: #fffff2;
   border-radius: 4px;
+  box-shadow: 1px 1px black;
   padding-left: 15px;
   padding-right: 15px;
   line-height: normal;
