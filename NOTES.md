@@ -6,12 +6,12 @@ Instructions
 
 #  4. While you're working on it, record a 30 min coding session with your favorite screen capture tool. During the session, either think out loud or not. It's up to you. You don't need to submit the video, but we may ask for it at a later time.
 
-  5. Make sure to create a good README.md with a short description, install instructions, a contributor's guide, and a link to the license for your code.
+#  5. Make sure to create a good README.md with a short description, install instructions, a contributor's guide, and a link to the license for your code.
 
 #  6. Make sure to check each box in your spec.md (replace the space between the square braces with an x) and explain next to each one how you've met the requirement before you submit your project.
 
-  7. Prepare a short video demo with narration describing how a user would interact with your working application.
+#  7. Prepare a short video demo with narration describing how a user would interact with your working application.
 
-  8. Write a blog post about the project and process.
+#  8. Write a blog post about the project and process.
 
-  9. When done, submit your GitHub repo's URL, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
+#  9. When done, submit your GitHub repo's URL(DONE), a link to your video demo (DONE), and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
