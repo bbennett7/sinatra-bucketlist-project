@@ -82,6 +82,10 @@ a {
   text-decoration: none;
 }
 
+a p {
+    color: #000;
+}
+
 a:visited {
   font-family: "Courier New", Courier, monospace;
   color: #fffff2;

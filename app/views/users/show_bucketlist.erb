@@ -7,7 +7,7 @@
   <%@user.experiences.each do |experience|%>
     <%if experience.bucketlist == @bucketlist%>
       <li><h6><a href="/experiences/<%=experience.slug%>"><%=experience.name%></a></h6></li>
-      <p><%=experience.location.city%>, <%=experience.location.country%></p>
+      <a href="/travels/<%=experience.location.slug%>/map"><p><%=experience.location.city%>, <%=experience.location.country%></p></a>
       <%if experience.experienced == true%>
         <p>Done!</p>
       <%else%>
