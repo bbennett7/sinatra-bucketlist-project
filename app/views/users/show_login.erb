@@ -2,17 +2,17 @@
 <div class="col"><p> </p></div>
 
 <div class="col_middle">
-  <h4>Log in to BucketList</h4>
+  <h4 class="typewriter_cream">Log in to BucketList</h4>
   <% if flash.has?(:message) %>
     <br>
-    <h6 class="flash"><%= flash[:message] %></h6>
+    <h6 class="sans_cream flash"><%= flash[:message] %></h6>
   <% end %>
   <form action="/login" method="POST">
-    <h6><label for="username">Username: </label>
+    <h6 class="sans_black"><label for="username">Username: </label>
     <input type="text" id="username" name="username"></h6>
-    <h6><label for="password">Password: </label>
+    <h6 class="sans_black"><label for="password">Password: </label>
     <input type="password" id="password" name="password"></h6>
-    <input class="submit" type="submit" id="log_in" value="Log In">
+    <input class="sans_brown submit" type="submit" id="log_in" value="Log In">
   </form>
   <br>
   <br>

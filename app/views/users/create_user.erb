@@ -2,21 +2,21 @@
 <div class="col"><p> </p></div>
 
 <div class="col_middle">
-  <h4>Sign up for BucketList</h4>
+  <h4 class="typewriter_cream">Sign up for BucketList</h4>
   <% if flash.has?(:message) %>
     <br>
-    <h6 class="flash"><%= flash[:message] %></h6>
+    <h6 class="sans_cream flash"><%= flash[:message] %></h6>
   <% end %>
   <form action="/signup" method="POST">
-    <h6><label for="name">Name: </label>
+    <h6 class="sans_black"><label for="name">Name: </label>
     <input type="text" id="name" name="name"></h6>
-    <h6><label for="email">Email: </label>
+    <h6 class="sans_black"><label for="email">Email: </label>
     <input type="text" id="email" name="email"></h6>
-    <h6><label for="username">Username: </label>
+    <h6 class="sans_black"><label for="username">Username: </label>
     <input type="text" id="username" name="username"></h6>
-    <h6><label for="password">Password: </label>
+    <h6 class="sans_black"><label for="password">Password: </label>
     <input type="password" id="password" name="password"></h6>
-    <input class="submit" type="submit" id="sign_up" value="Sign Up">
+    <input class="sans_brown submit" type="submit" id="sign_up" value="Sign Up">
   </form>
   <br>
   <br>
