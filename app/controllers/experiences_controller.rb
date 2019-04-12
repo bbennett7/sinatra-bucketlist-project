@@ -1,7 +1,7 @@
 class ExperiencesController < ApplicationController
   get '/experiences/new' do
     if logged_in?
-      erb :'/experiences/new'
+      erb :'/experiences/create_experience'
     else
       redirect '/login'
     end
@@ -46,12 +46,10 @@ class ExperiencesController < ApplicationController
     @user = current_user
     @experience_matches = Experience.find_all_by_slug(params[:slug])
     @experience = @experience_matches.find{|experience| experience.user_id == @user.id}
-
     @experience[:experienced] = params[:experienced]
     @experience.save
 
     flash[:message] = "Successfully changed experience status."
-
     redirect "/experiences/#{@experience.slug}"
   end
 
@@ -84,7 +82,6 @@ class ExperiencesController < ApplicationController
       @user = current_user
       @experience_matches = Experience.find_all_by_slug(params[:slug])
       @experience = @experience_matches.find{|experience| experience.user_id == @user.id}
-
       @experience[:name] = params[:name] unless params[:name].empty?
       @experience[:bucketlist] = params[:bucketlist] unless !params[:bucketlist]
 
@@ -94,7 +91,6 @@ class ExperiencesController < ApplicationController
       end
 
       @experience.save
-
       redirect "/experiences/#{@experience.slug}"
     end
   end

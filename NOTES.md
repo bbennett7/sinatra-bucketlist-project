@@ -8,7 +8,7 @@ Instructions
 
   5. Make sure to create a good README.md with a short description, install instructions, a contributor's guide, and a link to the license for your code.
 
-  6. Make sure to check each box in your spec.md (replace the space between the square braces with an x) and explain next to each one how you've met the requirement before you submit your project.
+#  6. Make sure to check each box in your spec.md (replace the space between the square braces with an x) and explain next to each one how you've met the requirement before you submit your project.
 
   7. Prepare a short video demo with narration describing how a user would interact with your working application.
 

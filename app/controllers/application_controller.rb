@@ -44,7 +44,7 @@ class ApplicationController < Sinatra::Base
       @user = current_user
       redirect "/users/#{@user.slug}"
     else
-      erb :'/users/login'
+      erb :'/users/show_login'
     end
   end
 
