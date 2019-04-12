@@ -1,3 +1,4 @@
+<div class="small_spacer"></div>
 <div class="col"><p> </p></div>
 
 <div class="col_middle_with_header">
@@ -21,8 +22,8 @@
     <form action="/experiences/<%=@experience.slug%>/status_change" method="POST">
       <input type="hidden" id="hidden" name="_method" value="patch">
       <p class="typewriter_black"><input type=radio id="experienced" name="experienced" value=true>Done!</input>
-      <input type=radio id="not_experienced" name="experienced" value=false>Need to do</input><p>
-      <input class="sans_brown submit" type="submit" id="submit" value="Update status">
+      <input type=radio id="not_experienced" name="experienced" value=false>Need to do</input>
+      <input class="sans_brown submit" type="submit" id="submit" value="Update status"><p>
     </form>
   </div>
   <br>
@@ -32,7 +33,7 @@
   <h5 class="typewriter_black"><a href="/users/<%=@user.slug%>/<%=@experience.bucketlist%>">View <%=@experience.bucketlist.downcase%> bucketlist</a></h5>
   <br>
   <br>
-  
+
   <form action="/delete/<%=@experience.slug%>" method="POST">
     <input type="hidden" id="hidden" name="_method" value="delete">
     <input class="sans_brown submit" type="submit" id="delete" value="Delete this experience">

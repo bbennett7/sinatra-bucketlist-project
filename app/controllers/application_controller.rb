@@ -29,7 +29,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/signup' do
-    if !params[:name].empty? && !params[:email].empty? && !params[:username].empty? && !params[:passowrd].empty?
+    if !params[:name].empty? && !params[:email].empty? && !params[:username].empty? && !params[:password].empty?
       @user = User.create(params)
       session[:user_id] = @user.id
       redirect "/users/#{@user.slug}"

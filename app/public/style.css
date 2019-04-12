@@ -28,6 +28,7 @@ h1 {
   border-style: solid;
   border-width: medium;
   border-color: #fffff2;
+  background-color: #fffff2;
   box-shadow: 1px 1px black;
   padding-left: 90px;
   padding-right: 80px;
@@ -100,6 +101,9 @@ a:active {
 h1 a:hover {
   text-decoration: none;
 }
+h1 a:active {
+  color: inherit;
+}
 
 #map {
   padding: 1.5%;
@@ -116,6 +120,26 @@ h1 a:hover {
   border-width: medium;
   border-color: #fffff2;
   box-shadow: 1px 1px black;
+}
+
+#homepage {
+  font-weight: lighter;
+}
+
+#rule_black {
+  height: 1px;
+  width: 60%;
+  background: #000;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+#rule_cream {
+  height: 1px;
+  width: 80%;
+  background: #fffff2;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .typewriter_cream {
