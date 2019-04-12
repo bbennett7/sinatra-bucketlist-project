@@ -9,16 +9,6 @@ class UsersController < ApplicationController
     end
   end
 
-  get '/users/:slug/:bucketlist' do
-    @user = User.find_by_slug(params[:slug])
-    if logged_in? && @user == current_user
-      @bucketlist = (params[:bucketlist]).capitalize
-      erb :'/users/show_bucketlist'
-    else
-      redirect '/login'
-    end
-  end
-
   get '/users/:slug/travels' do
     @user = User.find_by_slug(params[:slug])
     @traveled_locations = @user.experiences.collect do |experience|
@@ -36,6 +26,16 @@ class UsersController < ApplicationController
 
     if logged_in? && @user == current_user
       erb :'/users/show_locations'
+    else
+      redirect '/login'
+    end
+  end
+
+  get '/users/:slug/:bucketlist' do
+    @user = User.find_by_slug(params[:slug])
+    if logged_in? && @user == current_user
+      @bucketlist = (params[:bucketlist]).capitalize
+      erb :'/users/show_bucketlist'
     else
       redirect '/login'
     end
