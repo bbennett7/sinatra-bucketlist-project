@@ -131,10 +131,10 @@ h1 a:hover {
 }
 
 .col_middle {
-  width: 42%;
+  width: 40%;
   height: auto;
   float: left;
-  padding: 0% 0% 0% 13%;
+  padding: 0% 2% 0% 13%;
   margin-bottom: 1%;
   background: rgb(152, 72, 3);
   border-style: solid;

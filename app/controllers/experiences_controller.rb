@@ -8,7 +8,7 @@ class ExperiencesController < ApplicationController
   end
 
   post '/experiences' do
-    if !params[:name].empty? && !params[:city].empty? && !params[:country].empty? && !params[:bucketlist].empty?
+    if !params[:name].empty? && !params[:city].empty? && !params[:country].empty? && !!params[:bucketlist]
       @experience = Experience.create(name: params[:name], bucketlist: params[:bucketlist], experienced: false)
       @location = Location.find_or_create_by(city: params[:city], country: params[:country])
       @experience[:location_id] = @location.id
@@ -19,7 +19,7 @@ class ExperiencesController < ApplicationController
       @user.save
       redirect "/experiences/#{@experience.slug}"
     else
-      flash[:message] = "Error: Experience must have a name, location and bucketlist"
+      flash[:message] = "Error: All fields are required."
       redirect "/experiences/new"
     end
   end
