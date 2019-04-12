@@ -17,6 +17,19 @@
     <%end%>
   <%end%>
   </ol>
+
+  <%@experiences = @user.experiences.collect{|experience| experience if experience.bucketlist == @bucketlist}%>
+
+  <%@experiences.compact!%>
+
+  <%if @experiences.empty?%>
+    <h6><%="No experiences to display yet."%></h6>
+    <h6><a href="/experiences/new">Add something here to get started!</a></h6>
+    <br>
+    <br>
+  <%end%>
+
+
 </div>
 
 <div class="col"><p> </p></div>
