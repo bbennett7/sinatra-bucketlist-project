@@ -1,4 +1,4 @@
-<h3 class="page_heading"><%=@bucketlist%> BucketList</h3>
+<h3 class="typewriter_cream page_heading"><%=@bucketlist%> BucketList</h3>
 
 <div class="col"><p> </p></div>
 
@@ -6,12 +6,12 @@
   <ol>
   <%@user.experiences.each do |experience|%>
     <%if experience.bucketlist == @bucketlist%>
-      <li><h6><a href="/experiences/<%=experience.slug%>"><%=experience.name%></a></h6></li>
-      <a href="/travels/<%=experience.location.slug%>/map"><p><%=experience.location.city%>, <%=experience.location.country%></p></a>
+      <li class="typewriter_cream"><h6><a href="/experiences/<%=experience.slug%>"><%=experience.name%></a></h6></li>
+      <a href="/travels/<%=experience.location.slug%>/map"><p class="sans_black"><%=experience.location.city%>, <%=experience.location.country%></p></a>
       <%if experience.experienced == true%>
-        <p>Done!</p>
+        <p class="sans_black">Done!</p>
       <%else%>
-        <p>Need to do</p>
+        <p class="sans_black">Need to do</p>
       <%end%>
       <br>
     <%end%>
@@ -23,8 +23,8 @@
   <%@experiences.compact!%>
 
   <%if @experiences.empty?%>
-    <h6><%="No experiences to display yet."%></h6>
-    <h6><a href="/experiences/new">Add something here to get started!</a></h6>
+    <h6 class="sans_black"><%="No experiences to display yet."%></h6>
+    <h6 class="sans_black"><a href="/experiences/new">Add something here to get started!</a></h6>
     <br>
     <br>
   <%end%>
