@@ -1,5 +1,5 @@
 # BUCKETLIST DESCRIPTION
-Bucketlist is a Sinatra-based web app that allows users to create an account to track their bucketlists. Users can create life and seasonal bucketlists, and through these bucketlists, can access a list of travel locations that they have been to, those upcoming through their bucketlists as well as a map for each location. Bucketlist experiences can be added, edited, and viewed, and their statuses can be updated from "need to do" to "done!" (as well as back to "need to do", if necessary.)
+Bucketlist is a Sinatra-based web app that allows users to create an account to track their bucketlists. Users can create life and seasonal bucketlists, and through these bucketlists, can access a list of travel locations that they have been to, those upcoming through their bucketlists as well as a map for each location. Maps are dynamically added when a new experience is created. Bucketlist experiences can be added, edited, and viewed, and their statuses can be updated from "need to do" to "done!" (as well as back to "need to do", if necessary.)
 
 
 
