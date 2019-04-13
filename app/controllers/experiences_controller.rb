@@ -103,8 +103,3 @@ class ExperiencesController < ApplicationController
     redirect "/users/#{@user.slug}"
   end
 end
-
-#Make sure user can only edit or delete their own experiences
-
-#POST '/experiences'
-#{"name"=>"Visit Italy", "city"=>"Venice", "country"=>"Italy ", "bucketlist"=>"Life"}

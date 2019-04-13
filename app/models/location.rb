@@ -11,5 +11,3 @@ class Location < ActiveRecord::Base
     location = Location.find{|location| location.slug == slug}
   end
 end
-
-#A location has a name(city/country), and has many experiences

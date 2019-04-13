@@ -10,8 +10,3 @@ class Experience < ActiveRecord::Base
     experience_matches = Experience.select{|experience| experience.slug == slug}
   end
 end
-
-
-#An experience has a name, and status, and belongs to a user and location (has user_id and location_id)
-
-# how can i find experience by slug and also by current user id?

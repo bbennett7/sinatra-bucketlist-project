@@ -12,5 +12,3 @@ class User < ActiveRecord::Base
     user = User.find{|user| user.slug == username}
   end
 end
-
-#A user has an email, password, name, and username, has many experiences and has many locations through experiences
