@@ -2,8 +2,8 @@ class Location < ActiveRecord::Base
   has_many :experiences
 
   def slug
-    city = self.city.downcase.gsub(/[^0-9a-z\- ]/, "").gsub(" ", "-")
-    country = self.country.downcase.gsub(/[^0-9a-z\- ]/, "").gsub(" ", "-")
+    city = self.city.downcase.strip.gsub(/[^0-9a-z\-\b]/, "-")
+    country = self.country.downcase.strip.gsub(/[^0-9a-z\-\b]/, "-")
     "#{city}-#{country}"
   end
 
