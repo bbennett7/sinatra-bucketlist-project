@@ -1,30 +1,16 @@
-<h3 class="typewriter_cream page_heading">Travels</h3>
-<div id="rule_cream"></div>
-<div id="rule_black"></div>
-<div id="rule_cream"></div>
-<br>
+<h2>travels</h2>
 
-<div class="col"><p> </p></div>
-
-<div class="col_middle">
-  <h4 class="typewriter_cream">Where i have been: </h4>
-  <ul>
+<div class="main">
+  <h3>places I have been: </h3>
   <%@traveled_locations.each do |location|%>
-    <a href="/travels/<%=location.slug%>/map"><li class="typewriter_black"><p class="typewriter_cream"><%=location.city%>, <%=location.country%></p></li></a>
+    <p>+ <a href="/travels/<%=location.slug%>/map"><%=location.city%>, <%=location.country%></a></p>
   <%end%>
-  </ul>
   <br>
-</div>
 
-<div class="col_middle">
-  <h4 class="typewriter_cream">On my bucketlist: </h4>
-  <ul>
+  <h3>places on my bucketlist: </h3>
     <%@bucketlist_locations.each do |location|%>
       <%@location = location%>
-      <a href="/travels/<%=@location.slug%>/map"><li class="typewriter_black"><p class="typewriter_cream"><%=location.city%>, <%=location.country%></p></li></a>
+      <p>+ <a href="/travels/<%=@location.slug%>/map"><%=location.city%>, <%=location.country%></a></p>
     <%end%>
-  </ul>
-  <br>
+    <br>
 </div>
-
-<div class="col"><p> </p></div>
