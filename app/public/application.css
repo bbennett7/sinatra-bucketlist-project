@@ -145,6 +145,16 @@ hr {
   text-decoration-color: #fffff2;
 }
 
+#experience_information, #choose_bucketlist {
+  width: 49%;
+  display: inline-block;
+  float: left;
+}
+
+#experience_information input {
+  width: 60%; 
+}
+
 .list-cat {
   color: #ADD8E6;
 }

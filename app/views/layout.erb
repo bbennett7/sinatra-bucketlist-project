@@ -8,10 +8,6 @@
     <header>
       <h1><a href="/">BUCKETLIST</a></h1>
     </header>
-    
-  <div id="rule_cream"></div>
-  <div id="rule_black"></div>
-  <div id="rule_cream"></div>
 
     <%= yield %>
 
@@ -19,11 +15,10 @@
 
   <footer>
   <%if logged_in? == true%>
-    <div class="spacer clearfix"></div>
     <br>
     <br>
     <form action="/logout" method="POST">
-      <input class="sans_cream logout" type="submit" id="logout" value="Log Out">
+      <input class="logout" type="submit" id="logout" value="Log Out">
     </form>
     <br>
     <br>
