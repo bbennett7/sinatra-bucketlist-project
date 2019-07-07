@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     if logged_in? && @user == current_user
       erb :'/users/show_homepage'
     else
+      current_user
       redirect '/login'
     end
   end

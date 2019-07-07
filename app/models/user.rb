@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :experiences
   has_many :locations, through: :experiences
 
+
    def slug
      self.username.downcase.strip.gsub(/[^0-9a-z\-\b]/, "-")
    end

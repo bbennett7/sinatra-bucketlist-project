@@ -8,14 +8,15 @@ html, body {
 }
 
 body {
-  background: url(../../images/background-leather.jpg) center no-repeat;
+  background-color: #fffff2;
   background-size: cover;
   background-attachment: fixed;
 }
 
 header {
+  width: 100
   text-align: center;
-  margin: 20px;
+  background: url(../../images/background-leather.jpg) center no-repeat;
 }
 
 h1, h2, h3, h4, h5, h6 {

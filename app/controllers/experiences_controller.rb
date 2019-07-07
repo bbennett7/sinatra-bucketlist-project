@@ -8,6 +8,7 @@ class ExperiencesController < ApplicationController
   end
 
   post '/experiences' do
+    # params =>{xx:"hello", yy:"world"}
     if !params[:name].empty? && !params[:city].empty? && !params[:country].empty? && !!params[:bucketlist]
       @experience = Experience.create(name: params[:name], bucketlist: params[:bucketlist], experienced: false)
       @location = Location.find_or_create_by(city: params[:city], country: params[:country])
