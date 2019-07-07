@@ -1,17 +1,16 @@
 <h2>experiences</h2>
 
 <div class="main">
-  <span id="show_info">
+  <span class="show_info">
     <h2><%=@experience.name%></h2>
     <h3><%=@experience.location.city%>, <%=@experience.location.country%></h3>
-
     <%if @experience.experienced == true%>
       <h4>done!</h4>
     <%else%>
       <h4>need to do</h4>
-    <%end%><br>
+    <%end%>
   </span>
-  <hr><br><br>
+  <br><hr><br><br>
 
   <h3>update experience:</h3>
   <% if flash.has?(:message) %>

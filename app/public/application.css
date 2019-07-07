@@ -181,17 +181,17 @@ hr {
   display: inline;
 }
 
-#experience_information, #choose_bucketlist {
+.experience_information, .choose_bucketlist {
   width: 49%;
   display: inline-block;
   float: left;
 }
 
-#experience_information input {
-  width: 60%;
+.experience_information input {
+  width: 55%;
 }
 
-#show_info, #show_info > h2, #show_info > h3, #show_info > h4 {
+.show_info, .show_info > h2, .show_info > h3, .show_info > h4 {
   color: #fffff2;
   font-family: "Courier New", Courier, monospace;
   font-weight: lighter;
