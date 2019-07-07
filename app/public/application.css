@@ -39,6 +39,22 @@ footer {
   border-top: 2px solid black;
 }
 
+h2 {
+  height: 80px;
+  width: 103%;
+  background-color: #ADD8E6;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: lighter;
+  color: black;
+  text-align: center;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-left: -1%;
+  padding-top: 20px;
+}
+
 p, h6 {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
@@ -56,7 +72,7 @@ hr {
   margin: 50px auto 20% auto;
   text-align: center;
   padding-top: 8%;
-  padding-bottom: 1%; 
+  padding-bottom: 1%;
 }
 
 .access_section > h4 > a, .access_section > h4 > a:visited  {
@@ -101,6 +117,36 @@ hr {
   font-family: "Courier New", Courier, monospace;
   font-size: 1.2em;
   font-weight: 200;
+}
+
+.main {
+  width: 50%;
+  height: auto;
+  background-color: rgb(152, 72, 3);
+  border: 2px solid black;
+  margin: 50px auto 20% auto;
+  text-align: left;
+  padding: 3% 0% 1% 5%;
+}
+
+.main > h3 > a, .main > h3 > a:visited {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: lighter;
+  color: #fffff2;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.main > h3 > a:hover {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: lighter;
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: #fffff2;
+}
+
+.list-cat {
+  color: #ADD8E6;
 }
 
 .flash {

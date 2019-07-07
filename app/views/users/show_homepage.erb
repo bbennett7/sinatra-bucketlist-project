@@ -1,26 +1,18 @@
-<h3 class="typewriter_cream page_heading">Welcome, <%=@user.username%></h3>
-<div id="rule_cream"></div>
-<div id="rule_black"></div>
-<div id="rule_cream"></div>
-<br>
+<!-- <br><br><br><hr> -->
+<h2>welcome, <%=@user.username%></h2>
+<!-- <hr> -->
 
+<div class="main">
+  <h3><a href="/users/<%=@user.slug%>/life">+  view my <span class="list-cat">life</span> bucketlist</a></h3>
+  <h3><a href="/users/<%=@user.slug%>/spring">+  view my <span class="list-cat">spring</span> bucketlist</a></h3>
+  <h3><a href="/users/<%=@user.slug%>/summer">+  view my <span class="list-cat">summer</span> bucketlist</a></h3>
+  <h3><a href="/users/<%=@user.slug%>/fall">+  view my <span class="list-cat">fall</span> bucketlist</a></h3>
+  <h3><a href="/users/<%=@user.slug%>/winter">+  view my <span class="list-cat">winter</span> bucketlist</a></h3>
+  <h3><a href="/users/<%=@user.slug%>/travels">+  view my <span class="list-cat">travels</span></a></h3>
 
-<div class="col"><p> </p></div>
+  <br><br>
 
-<div class="col_middle">
-  <br>
-  <br>
-  <h5 class="typewriter_black" id="homepage"><a href="/users/<%=@user.slug%>/life">View my life bucketlist</a></h5>
-  <h5 class="typewriter_black" id="homepage"><a href="/users/<%=@user.slug%>/spring">View my spring bucketlist</a></h5>
-  <h5 class="typewriter_black" id="homepage"><a href="/users/<%=@user.slug%>/summer">View my summer bucketlist</a></h5>
-  <h5 class="typewriter_black" id="homepage"><a href="/users/<%=@user.slug%>/fall">View my fall bucketlist</a></h5>
-  <h5 class="typewriter_black" id="homepage"><a href="/users/<%=@user.slug%>/winter">View my winter bucketlist</a></h5>
-  <h5 class="typewriter_black" id="homepage"><a href="/users/<%=@user.slug%>/travels">View my travels</a></h5>
-  <br>
-  <br>
-  <h5 class="typewriter_black" id="homepage"><a href="/experiences/new">Add to my bucketlists</a></h5>
-  <br>
-  <br>
+  <h3><a href="/experiences/new">+  <span class="list-cat">add</span> to my bucketlists</a></h3>
+
+  <br><br>
 </div>
-
-<div class="col"></div>
