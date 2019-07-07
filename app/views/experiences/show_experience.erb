@@ -22,7 +22,7 @@
     <form action="/experiences/<%=@experience.slug%>/status_change" method="POST">
       <input type="hidden" id="hidden" name="_method" value="patch">
       <p><input type=radio id="experienced" name="experienced" value=true>done!</input>
-      <input type=radio id="not_experienced" name="experienced" value=false>need to do</input>
+      <input type=radio id="not_experienced" name="experienced" value=false>need to do</input><br><br>
       <input type="submit" id="submit" value="Update status"><p>
     </form>
   </div>
