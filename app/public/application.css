@@ -40,8 +40,8 @@ footer {
 }
 
 h2 {
-  height: 80px;
-  width: 103%;
+  height: 60px;
+  width: 102%;
   background-color: #ADD8E6;
   border-bottom: 2px solid black;
   border-top: 2px solid black;
@@ -52,7 +52,7 @@ h2 {
   margin-right: auto;
   margin-top: 50px;
   margin-left: -1%;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 p, h6 {
@@ -127,32 +127,34 @@ hr {
   margin: 50px auto 20% auto;
   text-align: left;
   padding: 3% 0% 1% 5%;
-}
-
-.main > h3 > a, .main > h3 > a:visited {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-weight: lighter;
+}
+
+.main h2 {
+  height: auto;
+  width: auto;
+  background-color: inherit;
+  border-bottom: 0px;
+  border-top: 0px;
+  color: #fffff2;
+  text-align: left;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: -1%;
+  padding-top: inherit;
+}
+
+.main > h3 > a, .main > h3 > a:visited, .main > h4 > a, .main > h4 > a:visited {
   color: #fffff2;
   text-decoration: none;
   letter-spacing: 1px;
 }
 
-.main > h3 > a:hover {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-  font-weight: lighter;
+.main > h3 > a:hover, .main > h4 > a:hover {
   color: black;
   text-decoration: underline;
   text-decoration-color: #fffff2;
-}
-
-#experience_information, #choose_bucketlist {
-  width: 49%;
-  display: inline-block;
-  float: left;
-}
-
-#experience_information input {
-  width: 60%; 
 }
 
 .list-cat {
@@ -177,4 +179,20 @@ hr {
   border: 4px solid #8D9F6F;
   padding: 6px 80px 6px 80px;
   display: inline;
+}
+
+#experience_information, #choose_bucketlist {
+  width: 49%;
+  display: inline-block;
+  float: left;
+}
+
+#experience_information input {
+  width: 60%;
+}
+
+#show_info, #show_info > h2, #show_info > h3, #show_info > h4 {
+  color: #fffff2;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: lighter;
 }

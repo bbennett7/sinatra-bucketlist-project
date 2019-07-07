@@ -1,45 +1,44 @@
-<div class="small_spacer"></div>
-<div class="col"><p> </p></div>
+<h2>experiences</h2>
 
-<div class="col_middle_with_header">
-  <h3 class="typewriter_cream"><%=@experience.name%></h3>
-  <h5 class="typewriter_cream"><%=@experience.location.city%>, <%=@experience.location.country%></h5>
+<div class="main">
+  <span id="show_info">
+    <h2><%=@experience.name%></h2>
+    <h3><%=@experience.location.city%>, <%=@experience.location.country%></h3>
 
-  <%if @experience.experienced == true%>
-    <h5 class="typewriter_cream">Done!</h5>
-  <%else%>
-    <h5 class="typewriter_cream">Need to do</h5>
-  <%end%><br>
-</div>
+    <%if @experience.experienced == true%>
+      <h4>done!</h4>
+    <%else%>
+      <h4>need to do</h4>
+    <%end%><br>
+  </span>
+  <hr><br><br>
 
-<div class="col_middle">
-  <h5 class="sans_cream">Change experience status:</h5>
+  <h3>update experience:</h3>
   <% if flash.has?(:message) %>
     <br>
-    <h6 class="sans_cream flash success"><%= flash[:message] %></h6>
+    <h6 class="flash success"><%= flash[:message] %></h6>
+    <br><br><br>
   <% end %>
   <div>
     <form action="/experiences/<%=@experience.slug%>/status_change" method="POST">
       <input type="hidden" id="hidden" name="_method" value="patch">
-      <p class="typewriter_black"><input type=radio id="experienced" name="experienced" value=true>Done!</input>
-      <input type=radio id="not_experienced" name="experienced" value=false>Need to do</input>
-      <input class="sans_brown submit" type="submit" id="submit" value="Update status"><p>
+      <p><input type=radio id="experienced" name="experienced" value=true>done!</input>
+      <input type=radio id="not_experienced" name="experienced" value=false>need to do</input>
+      <input type="submit" id="submit" value="Update status"><p>
     </form>
   </div>
   <br>
   <br>
 
-  <h5 class="typewriter_black"><a class="typewriter_black" href="/experiences/<%=@experience.slug%>/edit">Edit this experience</a></h5>
-  <h5 class="typewriter_black"><a href="/users/<%=@user.slug%>/<%=@experience.bucketlist%>">View <%=@experience.bucketlist.downcase%> bucketlist</a></h5>
+  <h4><a href="/experiences/<%=@experience.slug%>/edit">edit this experience</a></h4>
+  <h4><a href="/users/<%=@user.slug%>/<%=@experience.bucketlist%>">view <%=@experience.bucketlist.downcase%> bucketlist</a></h4>
   <br>
   <br>
 
   <form action="/delete/<%=@experience.slug%>" method="POST">
     <input type="hidden" id="hidden" name="_method" value="delete">
-    <input class="sans_brown submit" type="submit" id="delete" value="Delete this experience">
+    <input type="submit" id="delete" value="Delete this experience">
   </form>
   <br>
   <br>
 </div>
-
-<div class="col"><p> </p></div>
