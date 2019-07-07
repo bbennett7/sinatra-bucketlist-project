@@ -1,22 +1,22 @@
-<div class="small_spacer"></div>
-<div class="col"><p> </p></div>
-
-<div class="col_middle">
-  <h4 class="typewriter_cream">Sign up for Bucketlist</h4>
+<div class="access_section">
+  <h1>SIGN UP FOR BUCKETLIST</h1>
+  <hr><br><br>
   <% if flash.has?(:message) %>
     <br>
-    <h6 class="sans_cream flash"><%= flash[:message] %></h6>
+    <h6 class="flash"><%= flash[:message] %></h6>
+    <br><br><br>
   <% end %>
   <form action="/signup" method="POST">
-    <h6 class="sans_black"><label for="name">Name: </label>
-    <input type="text" id="name" name="name"></h6>
-    <h6 class="sans_black"><label for="email">Email: </label>
-    <input type="text" id="email" name="email"></h6>
-    <h6 class="sans_black"><label for="username">Username: </label>
-    <input type="text" id="username" name="username"></h6>
-    <h6 class="sans_black"><label for="password">Password: </label>
-    <input type="password" id="password" name="password"></h6>
-    <input class="sans_brown submit" type="submit" id="sign_up" value="Sign Up">
+    <p><label for="name">Name: </label>
+    <input type="text" id="name" name="name"></p>
+    <p><label for="email">Email: </label>
+    <input type="text" id="email" name="email"></p>
+    <p><label for="username">Username: </label>
+    <input type="text" id="username" name="username"></p>
+    <p><label for="password">Password: </label>
+    <input type="password" id="password" name="password"></p>
+    <br>
+    <input type="submit" id="sign_up" value="SIGN UP">
   </form>
   <br>
   <br>
