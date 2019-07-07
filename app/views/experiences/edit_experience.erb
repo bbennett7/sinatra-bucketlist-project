@@ -18,21 +18,21 @@
   <form action="/experiences/<%=@experience.slug%>" method="POST">
     <span class="experience_information">
       <input type="hidden" id="hidden" name="_method" value="patch">
-      <p><label for="experience_name">experience name:</label>
+      <p><label for="experience_name">experience name:</label><br>
       <input type="text" id="experience_name" name="name"></p>
-      <p><label for="city">city:</label>
+      <p><label for="city">city:</label><br>
       <input type="text" id="city" name="city"></p>
-      <p><label for="country">country:</label>
+      <p><label for="country">country:</label><br>
       <input type="text" id="country" name="country"></p>
     </span>
 
     <span class="choose_bucketlist">
       <div>
-        <p><input type="radio" id="life" name="bucketlist" value="Life"> Life Bucketlist </input><br></p>
-        <p><input type="radio" id="spring" name="bucketlist" value="Spring"> Spring Bucketlist </input><br></p>
-        <p><input type="radio" id="summer" name="bucketlist" value="Summer"> Summer Bucketlist </input><br></p>
-        <p><input type="radio" id="fall" name="bucketlist" value="Fall"> Fall Bucketlist </input><br></p>
-        <p><input type="radio" id="winter" name="bucketlist" value="Winter"> Winter Bucketlist </input><br></p>
+        <p><input type="radio" id="life" name="bucketlist" value="Life"> life bucketlist </input><br></p>
+        <p><input type="radio" id="spring" name="bucketlist" value="Spring"> spring bucketlist </input><br></p>
+        <p><input type="radio" id="summer" name="bucketlist" value="Summer"> summer bucketlist </input><br></p>
+        <p><input type="radio" id="fall" name="bucketlist" value="Fall"> fall bucketlist </input><br></p>
+        <p><input type="radio" id="winter" name="bucketlist" value="Winter"> winter bucketlist </input><br></p>
       </div>
     </span>
 

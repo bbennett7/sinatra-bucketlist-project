@@ -1,26 +1,17 @@
-<h3 class="typewriter_cream page_heading"><%=@bucketlist%> Bucketlist</h3>
-<div id="rule_cream"></div>
-<div id="rule_black"></div>
-<div id="rule_cream"></div>
-<br>
+<h2><%=@bucketlist.downcase%> bucketlist</h2>
 
-<div class="col"><p> </p></div>
-
-<div class="col_middle">
-  <ol>
+<div class="main">
   <%@user.experiences.each do |experience|%>
     <%if experience.bucketlist == @bucketlist%>
-      <li class="typewriter_cream"><h6><a href="/experiences/<%=experience.slug%>"><%=experience.name%></a></h6></li>
-      <a href="/travels/<%=experience.location.slug%>/map"><p class="typewriter_black"><%=experience.location.city%>, <%=experience.location.country%></p></a>
       <%if experience.experienced == true%>
-        <p class="typewriter_black">Done!</p>
+        <h3>+ <a href="/experiences/<%=experience.slug%>"> <%=experience.name%> - done!</a></h3>
       <%else%>
-        <p class="typewriter_black">Need to do</p>
+        <h3>+ <a href="/experiences/<%=experience.slug%>"> <%=experience.name%> - need to do</a></h3>
       <%end%>
+      <p>  -->> <a href="/travels/<%=experience.location.slug%>/map"><%=experience.location.city%>, <%=experience.location.country%></a></p>
       <br>
     <%end%>
   <%end%>
-  </ol>
 
   <%@experiences = @user.experiences.collect{|experience| experience if experience.bucketlist == @bucketlist}%>
 
@@ -34,5 +25,3 @@
   <%end%>
 
 </div>
-
-<div class="col"><p> </p></div>

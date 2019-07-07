@@ -145,13 +145,13 @@ hr {
   padding-top: inherit;
 }
 
-.main > h3 > a, .main > h3 > a:visited, .main > h4 > a, .main > h4 > a:visited {
+.main > h3 > a, .main > h3 > a:visited, .main > h4 > a, .main > h4 > a:visited, .main > p > a, .main > p > a:visited {
   color: #fffff2;
   text-decoration: none;
   letter-spacing: 1px;
 }
 
-.main > h3 > a:hover, .main > h4 > a:hover {
+.main > h3 > a:hover, .main > h4 > a:hover,  .main > p > a:hover {
   color: black;
   text-decoration: underline;
   text-decoration-color: #fffff2;
@@ -188,7 +188,7 @@ hr {
 }
 
 .experience_information input {
-  width: 55%;
+  width: 60%;
 }
 
 .show_info, .show_info > h2, .show_info > h3, .show_info > h4 {
