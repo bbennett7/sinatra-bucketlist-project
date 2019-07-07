@@ -1,13 +1,7 @@
-<h3 class="typewriter_cream page_heading">Map of <%=@location.city%>, <%=@location.country%></h3>
-<div id="rule_cream"></div>
-<div id="rule_black"></div>
-<div id="rule_cream"></div>
-<br>
+<h2 class="typewriter_cream page_heading">map of <%=@location.city%>, <%=@location.country%></h2>
 
-<div class="col"><p> </p></div>
-
-<div class="col_middle" id="map_section">
-  <iframe id="map" src="https://www.google.com/maps?q=[<%=@location.city%>, <%=@location.country%>]&output=embed" width="96%" height="96%" frameborder="0" style="border:0" allowfullscreen></iframe>
+<div class="map_border">
+  <div class="main" id="map_section">
+    <iframe id="map" src="https://www.google.com/maps?q=[<%=@location.city%>, <%=@location.country%>]&output=embed" width="96%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
 </div>
-
-<div class="col"></div>
