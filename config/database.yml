@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: bucketlistapp_development
+  pool: 2
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: bucketlistapp
+  pool: 2
+  username: bucketlistapp
+  password: <%= ENV['BUCKETLISTAPP_DATABASE_PASSWORD'] %>

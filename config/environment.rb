@@ -1,14 +1,14 @@
-require 'sqlite3'
+require 'pg'
 require 'pry'
 
-ENV['SINATRA_ENV'] ||= "development"
+ENV['SINATRA_ENV'] ||= "bucketlistapp_development"
 
 require 'bundler/setup'
 Bundler.require(:default, ENV['SINATRA_ENV'])
 
 ActiveRecord::Base.establish_connection(
-  :adapter => "sqlite3",
-  :database => "db/#{ENV['SINATRA_ENV']}.sqlite"
+  :adapter => "postgresql",
+  :database => "#{ENV['SINATRA_ENV']}"
 )
 
 require_all 'app'
