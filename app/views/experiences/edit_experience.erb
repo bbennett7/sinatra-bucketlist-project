@@ -15,6 +15,7 @@
   <% end %>
   <br><br>
 
+<!-- edit experience info -->
   <form action="/experiences/<%=@experience.slug%>" method="POST">
     <span class="experience_information">
       <input type="hidden" id="hidden" name="_method" value="patch">
@@ -26,6 +27,7 @@
       <input type="text" id="country" name="country"></p>
     </span>
 
+<!-- edit which bucketlist experience belongs to -->
     <span class="choose_bucketlist">
       <div>
         <p><input type="radio" id="life" name="bucketlist" value="Life"> life bucketlist </input><br></p>
