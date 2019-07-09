@@ -8,6 +8,7 @@
     <header>
       <h1><a href="/"><span id="blue-header">BUCKET</span>LIST</a></h1>
     </header>
+    <%if logged_in? == true%>
     <nav>
       <h4><a href="/">home</a></h4>
       <h4><a href="/users/<%=@user.slug%>/life">life</a></h4>
@@ -19,6 +20,7 @@
       <h4><a href="/experiences/new">add</a></h4>
       <h4><a href="/logout">logout</a></h4>
     </nav>
+    <%end%>
 
     <%= yield %>
 
