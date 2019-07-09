@@ -1,6 +1,7 @@
 class ExperiencesController < ApplicationController
   get '/experiences/new' do
     if logged_in?
+      @user = current_user
       erb :'/experiences/create_experience'
     else
       redirect '/login'
